@@ -1,0 +1,877 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: "Nunito Sans",sans-serif;
+    font-size: 14px;
+}
+
+nav {
+    display: flex;
+    padding: 23px 80px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+    background-color: #fff;
+}
+
+nav label {
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: none;
+}
+
+nav input {
+    position: absolute;
+    display: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav .logo a {
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-family: 'Fredoka One', cursive;
+    font-size: 35px;
+    color: black;
+}
+
+nav .logo a span {
+    color: red;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+}
+
+nav ul a {
+    color: black;
+    margin: 0 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1.3px;
+    display: block;
+    position: relative;
+    transition: all 0.4s ease-in;
+}
+
+nav .main-menu li a:hover {
+    color: #e53637;
+}
+
+nav .main-menu li a::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 52px;
+    left: 0;
+    right: 100%;
+    transition: all 0.4s ease-in;
+}
+
+nav .main-menu li a:hover::before {
+    background-color: #e53637;
+    height: 3px;
+    right: 0;
+}
+
+nav a.shop::after {
+    content: "HOT";
+    background-color: red;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 10px;
+    transition: all .2s ease-out 0s;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 30%);
+    position: absolute;
+    top: -21px;
+    right: -27px;
+    display: inline-block;
+}
+
+.icons-navBar span {
+    font-size: 26px;
+    margin: 0 -10px;
+}
+
+.icons-navBar span.shopping {
+    position: relative;
+}
+
+.icons-navBar span.shopping::after {
+    content: "02";
+    font-family: "Roboto", sans-serif;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: red;
+    color: #fff;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 30px;
+    font-size: 12px;
+    top: -14px;
+    right: -20px;
+    transition: all .2s ease-out 0s;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 30%);
+}
+
+
+.banner {
+    background: url("https://preview.colorlib.com/theme/malefashion/img/hero/hero-1.jpg.webp");
+    background-size: cover;
+    background-position: 50%;
+    padding-top: 230px;
+    height: 800px;
+    position: relative;
+}
+
+.banner .intro {
+    width: 1140px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.banner .intro h6 {
+    color: #e53637;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 28px;
+}
+
+.banner .intro h2 {
+    color: #111;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58px;
+    margin-bottom: 30px;
+    width: 510px;
+}
+
+.banner .intro p {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 35px;
+    width: 570px;
+}
+
+.shop-container {
+    display: inline-block;
+}
+
+.shop-now {
+    display: block;
+    text-transform: uppercase;
+    background-color: #000;
+    color: white;
+    letter-spacing: 3px;
+    padding: 15px 30px;
+    text-decoration: none;
+}
+
+.categories {
+    margin-top: 35px;
+}
+
+.categories .content {
+    width: 1140px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.categories .content > div {
+    width: calc((100% - 90px) / 3);
+    position: relative;
+}
+
+.categories .content > div .image img {
+    width: 100%;
+    display: block;
+}
+
+.categories .content > div .image {
+    position: relative;
+}
+
+.categories .content > div .image::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 13px solid #ffffff;
+    content: "";
+    opacity: 0.3;
+    width: 0;
+    height: 0;
+    transition: all 0.4s;
+}
+
+.categories .content > div:hover .image::before {
+    width: calc(100% - 70px);
+    height: calc(100% - 60px);
+}
+
+.categories .content > div .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #252525;
+    font-weight: 700;
+    padding: 11px 28px;
+    background: #ffffff;
+    border-radius: 2px;
+    font-family: "Muli", sans-serif;
+}
+
+.categories .content > div .title h4 {
+    margin: 0;
+}
+
+.collection {
+    margin-top: 80px;
+}
+
+.collection .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.collection .intro h2 {
+    margin: 0 0 10px;
+    font-family: "Montserrat",sans-serif;
+    font-size: 35px;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+
+.collection .intro p {
+    margin-bottom: 50px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #777;
+}
+
+.collection .featured-products,
+.collection .best-seller,
+.collection .hot-trend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.collection .featured-products > div,
+.collection .best-seller > div,
+.collection .hot-trend > div {
+    width: calc((100% - 120px) / 4);
+    margin-bottom: 30px;
+}
+
+.product {
+    position: relative;
+}
+
+.product img {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.desc h6 {
+    color: #111111;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.desc h5 {
+    color: #0d0d0d;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.desc .rating {
+    margin-bottom: 6px;
+}
+
+.desc .rating i {
+    font-size: 14px;
+    color: #b7b7b7;
+    margin-right: -5px;
+}
+
+#str {
+    color: #ff4624;
+}
+
+.icons {
+    transition: all .3s ease-out 0s;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: 0;
+    bottom: 20px;
+    text-align: center;
+}
+
+.icons a {
+    display: inline-block;
+}
+
+.icons span {
+    transition: all 0.3s;
+    background: #fff;
+    color: #292621;
+    width: 64px;
+    height: 50px;
+    display: inline-block;
+    font-size: 27px;
+    text-align: center;
+    line-height: 54px;
+    margin: -3px;
+}
+
+.product:hover .icons {
+    opacity: 1;
+}
+
+.icons span:hover {
+    background-color: #e53637;
+    color: #fff;
+}
+
+.latest-news {
+    background: #F6F6F6;
+    padding-top: 80px;
+    padding-bottom: 29px;
+    margin-top: 80px;
+}
+
+.latest-news h2 {
+    font-family: "Montserrat",sans-serif;
+    font-size: 35px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.latest-news .container {
+    width: 1140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.latest-news .container > div {
+    width: calc((100% - 120px) / 3);
+}
+
+.latest-news .container > div img {
+    display:  block;
+    width: 100%;
+}
+
+.latest-news .container > div span  {
+    color: #74706B;
+    margin: 25px 0 11px;
+    display: block;
+}
+
+.latest-news .container > div .link {
+    margin-bottom: 12px;
+    display: block;
+    text-decoration: none;
+}
+
+.latest-news .container > div .read-more {
+    color: #111;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.4s ease-in-out;
+}
+
+.latest-news .container > div h5 {
+    color: #111;
+    line-height: 1.4;
+    font-size: 25px;
+    font-weight: 500;
+    transition: all 0.3s;
+    font-family: "Montserrat",sans-serif;
+}
+
+.latest-news .container > div p  {
+    color: #74706B;
+    margin-bottom: 24px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.latest-news .container > div:hover h5 {
+    color: #e40001;
+    letter-spacing: 1.1px;
+}
+
+.latest-news .container > div .read-more:hover{
+    letter-spacing: 1.2px;
+}
+
+.services {
+    width: 1140px;
+    margin: 0 auto ;
+    padding: 80px 0 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.services > div {
+    width: calc((100% - 120px) / 4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.services > div img {
+    display: block;
+    margin-bottom: 26px;
+    transition: all 0.4s;
+}
+
+.services > div h5 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #111;
+    font-weight: 600;
+    transition: all 0.4s;
+}
+
+section > div p {
+    color: #57667e;
+    font-size: 16px;
+    transition: all 0.4s;
+}
+
+.services > div:hover img {
+    transform: scale(1.5) skew(5deg);
+}
+
+.services > div:hover h5 {
+    color: #e53637;
+}
+
+.services > div:hover p {
+    letter-spacing: 2px;
+}
+
+footer {
+    margin-top: 80px;
+    font-family: Muli, sans-serif;
+    background-color: #1d2736;
+}
+
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px;
+    color: white;
+}
+
+footer .container > div {
+    margin: 0 5px;
+    margin-bottom: 50px;
+}
+
+footer .container .about {
+    width: 330px;
+}
+
+footer .container .about h2,
+footer .container .links h2,
+footer .container .contact h2  {
+    font-size: 32px;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+footer .container .about p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #898989;
+}
+
+footer .container .about > div a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    background-color: #e53637;
+    border-radius: 3px;
+    margin-right: 6px;
+}
+
+footer .container .about > div a i {
+    font-size: 15px;
+    color: #fff;
+}
+
+footer .container .links > div {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .container .links > div a {
+    color: #898989;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+footer .container .links h3 {
+    margin: 5px 0 15px;
+}
+
+footer .container .contact  .tocontact > div {
+    display: flex;
+    margin-bottom: 30px;
+    color: #898989;
+}
+
+footer .container .contact .tocontact > div span {
+    display: block;
+    margin-right: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+footer .container .contact  .tocontact  div p {
+    line-height: 1.8;
+    margin: 0;
+}
+
+footer .copy-right {
+    padding: 20px;
+    margin-top: -60px;
+    padding-bottom:50px;
+}
+
+footer .copy-right > p {
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+footer .copy-right > p span {
+    color: #898989;
+}
+
+@media screen and (max-width: 1140px) {
+    nav {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    nav ul a {
+        margin: 0 15px;
+    }
+
+    
+    .banner .intro,
+    .collection .featured-products,
+    .collection .best-seller,
+    .collection .hot-trend,
+    .latest-news .container,
+    .services {
+        width: 920px;
+    }
+
+    .banner .intro p {
+        width: 470px;
+    }
+
+    .services > div h5 {
+        font-size: 18px;
+    }
+
+    .services > div p {
+        font-size: 14px;
+    }
+    .categories .content {
+        width: 920px;
+    }
+
+    .categories .content > div .image::before {
+        border-width: 11px;
+    }
+
+    .categories .content > div .title {
+        padding: 11px 23px;
+        font-size: 14px;
+    }
+
+    .latest-news .container > div h5 {
+        font-size: 20px;
+    } 
+
+    footer .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    nav label {
+        display: block;
+        position: static;
+    }
+
+    nav .main-menu {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 76px;
+        bottom: calc(100% - 76px);
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+        background-color: #fff;
+    }
+
+    nav .main-menu ul {
+        flex-direction: column;
+        background-color: #fff;
+        padding: 0 0 10px;
+    }
+
+    nav .main-menu ul li a {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    nav a.shop::after {
+        content: "";
+    }
+
+    nav input:checked~.main-menu {
+        bottom: calc(100% - 370px);
+        box-shadow: 0 12px 12px 0px rgb(97 97 97 / 8%);
+    }
+
+    nav .main-menu li a::before {
+    display: none;
+    }
+    
+    .banner {
+        background-position: 54%;
+    }
+   
+    .banner .intro,
+    .collection .featured-products,
+    .collection .best-seller,
+    .collection .hot-trend,
+    .latest-news .container {
+        width: 100%;
+    }
+    
+    .banner .intro h2 {
+        font-size: 44px;
+        max-width: 350px;
+    }
+
+    .categories .content {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .categories .content > div {
+        width: calc(50% - 30px);
+        margin-bottom: 27px;
+    }
+
+    .categories .content > div .image::before {
+        border-width: 13px;
+    }
+
+    .categories .content > div .title {
+        padding: 11px 28px;
+        font-size: 16px;
+    }
+
+    .collection .featured-products > div,
+    .collection .best-seller > div,
+    .collection .hot-trend > div {
+        width: calc((100% - 60px) / 2);
+        margin-bottom: 30px;
+    }
+
+    .services {
+        width: 660px;
+        padding-top: 50px;
+    }
+
+    .services > div {
+        width: calc((100% - 60px) / 2);
+    }
+
+    .services > div h5 {
+        font-size: 20px;
+    }
+
+    .services > div p {
+        font-size: 16px;
+    }
+
+    .latest-news .container > div {
+        width: calc(50% - 60px);
+        margin-bottom: 60px;
+    }
+
+    footer .container {
+        flex-direction: column;
+        padding: 50px 20px
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .banner {
+        background-position: 58%;
+    }
+
+
+    .banner .intro p {
+        width: 380px;
+    }  
+
+    .collection .featured-products > div,
+    .collection .best-seller > div,
+    .collection .hot-trend > div {
+        width: calc(100% - 30px);
+    }
+
+    .collection .intro p {
+        width: calc(100% - 30px);
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .services {
+        width: 100%;
+    }
+
+    .services > div {
+        width: calc(100% - 30px);
+    }
+
+    .categories .content {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .categories .content > div {
+        width: calc(100% - 30px);
+    }
+
+    .latest-news .container > div {
+        width: calc(100% - 60px);
+    }
+
+    .latest-news .container > div h5 {
+        font-size: 25px;
+    }
+
+}
+
+@media screen and (max-width: 520px) {
+    nav {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    
+    nav .main-menu {
+        top: 56px;
+        bottom: calc(100% - 56px);
+        transition: all 0.5s 0.1s ease-in-out;
+    }
+    
+    nav input:checked~.main-menu {
+        bottom: calc(100% - 372px);
+    }
+
+    nav .icons-navBar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 56px;
+        bottom: calc(100% - 56px);
+        overflow: hidden;
+        transition: all 0.7s  ease-in-out;
+        background-color: #fff;
+    }
+
+    nav input:checked~.icons-navBar {
+        top: 368px;
+        bottom: calc(100% - 420px);
+        box-shadow: 0 12px 12px 0px rgb(97 97 97 / 8%);
+    }
+
+    .icons-navBar span.shopping::after {
+        display: none;
+    }
+
+    nav .icons-navBar ul {
+        padding: 4px 0 20px;
+        margin: 0;
+        justify-content: space-evenly;
+    }    
+}
+
+@media screen and (max-width: 390px) {
+    .banner .intro h2,
+    .banner .intro p {
+        width: auto;
+    }
+    
+    footer .container .about,
+    footer .container .links,
+    footer .container .contact,
+    footer .container .contact  .tocontact {
+        width: 100%;
+        overflow: scroll;
+    }
+}
